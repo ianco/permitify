@@ -22,7 +22,7 @@ class Issuer:
     def __init__(self):
         self.pool = NodePool(
             'permitify-issuer',
-            '/app/.genesis')
+            os.path.realpath('$HOME/.genesis'))
 
         self.instance = VonIssuer(
             self.pool,
@@ -49,7 +49,7 @@ class Verifier:
     def __init__(self):
         self.pool = NodePool(
             'permitify-verifier',
-            '/app/.genesis')
+            os.path.realpath('$HOME/.genesis'))
 
         self.instance = VonVerifier(
             self.pool,
@@ -76,7 +76,7 @@ class Holder:
     def __init__(self):
         self.pool = NodePool(
             'permitify-holder',
-            '/app/.genesis')
+            os.path.realpath('$HOME/.genesis'))
 
         self.instance = VonHolderProver(
             self.pool,

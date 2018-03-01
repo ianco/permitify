@@ -82,6 +82,7 @@ configureEnvironment () {
   fi
 
   export INDY_WALLET_SEED=${seed%?}
+  export LEDGER_URL=${LEDGER_URL-http://138.197.170.136}
 }
 
 getStartupParams() {

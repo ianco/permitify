@@ -42,6 +42,8 @@ else
     exit 1
 fi
 
+curl "$LEDGER_URL"/genesis > "$HOME"/.genesis
+
 # python3 manage.py migrate
 echo "Starting server ..."
 exec "$@"
